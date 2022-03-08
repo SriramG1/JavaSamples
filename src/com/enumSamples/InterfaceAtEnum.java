@@ -5,7 +5,7 @@ interface SampleOne{
 }
 
 enum Seasons implements SampleOne{
-    WINDER,SUMMER;
+    WINTER,SUMMER;
     @Override
     public void display() {
         System.out.println("This is Winder");
@@ -13,7 +13,7 @@ enum Seasons implements SampleOne{
 }
 public class InterfaceAtEnum {
     public static void main(String[] args) {
-        Seasons seasons=Seasons.WINDER;
+        Seasons seasons=Seasons.WINTER;
         seasons.display();
     }
 }
