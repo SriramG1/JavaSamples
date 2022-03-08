@@ -1,7 +1,7 @@
 package com.enumSamples;
 
 
-public class EnumSampleOne {
+public class OrdinalEnum {
     public static void main(String[] args) {
 
         System.out.println();
