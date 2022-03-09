@@ -17,7 +17,7 @@ public class NumberCheckEnum {
             return Errors.PERFECT;
         }
     }
-    static void method(){
+    static void getNumber(){
         Scanner in = new Scanner(System.in);
         System.out.println("Enter your mobile number : ");
         String number = in.next();
@@ -26,15 +26,15 @@ public class NumberCheckEnum {
             case PERFECT -> System.out.println("Your number is perfect");
             case MORE_DIGITS -> {
                 System.out.println("Your number is more than 10 digits");
-                method();
+                getNumber();
             }
             case LESS_DIGITS -> {
                 System.out.println("Your number is less than 10 digits");
-                method();
+                getNumber();
             }
         }
     }
     public static void main(String[] args) {
-        method();
+        getNumber();
     }
 }
