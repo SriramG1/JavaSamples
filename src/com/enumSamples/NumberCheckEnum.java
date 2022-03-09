@@ -1,5 +1,4 @@
 package com.enumSamples;
-
 import java.util.Scanner;
 
 enum Errors{
@@ -18,14 +17,24 @@ public class NumberCheckEnum {
             return Errors.PERFECT;
         }
     }
-    public static void main(String[] args) {
+    static void method(){
         Scanner in = new Scanner(System.in);
+        System.out.println("Enter your mobile number : ");
         String number = in.next();
-        Errors result=check(number);
-        switch (result){
+        Errors result = check(number);
+        switch (result) {
             case PERFECT -> System.out.println("Your number is perfect");
-            case MORE_DIGITS -> System.out.println("Your number is less than 10 digits");
-            case LESS_DIGITS -> System.out.println("Your number is more than 10 digits");
+            case MORE_DIGITS -> {
+                System.out.println("Your number is more than 10 digits");
+                method();
+            }
+            case LESS_DIGITS -> {
+                System.out.println("Your number is less than 10 digits");
+                method();
+            }
         }
+    }
+    public static void main(String[] args) {
+        method();
     }
 }
