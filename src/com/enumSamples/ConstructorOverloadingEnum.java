@@ -1,8 +1,8 @@
 package com.enumSamples;
 
 enum WeekDays{
-    SUNDAY("Hello"),MONDAY(2.0f),TUESDAY(3.0f),WEDNESDAY(4.0f),
-    THURSDAY(5.0f),FRIDAY(6.0f),SATURDAY(7.0f);
+    SUNDAY("Ram"),MONDAY(2.0f),TUESDAY(3.0f),WEDNESDAY(4.0f),
+    THURSDAY(10),FRIDAY("Sri",6.0f),SATURDAY(7.0f);
     float number;
     int numberOne;
     String name;
@@ -12,8 +12,12 @@ enum WeekDays{
     WeekDays(float number){
         this.number =number;
     }
-    WeekDays(String x){
-        this.name=x;
+    WeekDays(String str){
+        this.name=str;
+    }
+    WeekDays(String str,float number){
+        this.name=str;
+        this.number=number;
     }
 }
 public class ConstructorOverloadingEnum {
